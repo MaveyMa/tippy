@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  tippy
 //
 //  Created by Mavey Ma on 1/27/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     
     @IBAction func calculateTip(_ sender: Any) {
         
-        let tipPercentages = [0.15, 0.18, 0.2, 0.25]
+        let tipPercentages = [0.1, 0.15, 0.18, 0.20]
         
         //Convert billField string into a number
         //If what's on the left of ?? is equal to nil,
