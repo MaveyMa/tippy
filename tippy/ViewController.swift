@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tipLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var billField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,8 +25,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onTap(_ sender: Any) {
-        print("Yo")
+        //When user taps anywhere outside of the billField, hide keyboard
+        view.endEditing(true)
     }
     
+    @IBAction func calculateTip(_ sender: Any) {
+        //Convert billField string into a number
+        //If what's on the left of ?? is equal to nil,
+        // return 0 as the default value
+        let bill = Double(billField.text!) ?? 0
+        let tip = bill * 0.2
+        let total = bill + tip
+        
+        //A special syntax \(variableName) that's like concatenation
+        tipLabel.text = "$\(tip)"
+        totalLabel.text = "$\(total)"
+    }
 }
 
