@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
+    @IBOutlet weak var tipControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +31,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateTip(_ sender: Any) {
+        
+        let tipPercentages = [0.15, 0.18, 0.2, 0.25]
+        
         //Convert billField string into a number
         //If what's on the left of ?? is equal to nil,
         // return 0 as the default value
         let bill = Double(billField.text!) ?? 0
-        let tip = bill * 0.2
+        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
         
         //A special syntax \(variableName) that's like concatenation
