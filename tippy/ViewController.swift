@@ -38,8 +38,8 @@ class ViewController: UIViewController {
         let total = bill + tip
         
         //A special syntax \(variableName) that's like concatenation
-        tipLabel.text = "$\(tip)"
-        totalLabel.text = "$\(total)"
+        tipLabel.text = String(format: "$%.2f", tip)
+        totalLabel.text = String(format: "$%.2f", total)
     }
 }
 
