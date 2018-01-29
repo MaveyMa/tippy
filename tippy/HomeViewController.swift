@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
@@ -27,9 +28,10 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
-        
+        let font = UIFont.systemFont(ofSize: 16)
+        tipControl.setTitleTextAttributes([NSAttributedStringKey.font: font],
+                                                for: .normal)
         /**
          * Summary: Overrides fading the Settings button after it's clicked
          * Source: https://stackoverflow.com/questions/47754472/ios-uinavigationbar-button-remains-faded-after-segue-back
@@ -63,6 +65,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("view did appear")
+        billField.becomeFirstResponder()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -80,6 +83,12 @@ class HomeViewController: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction func onTapClear(_ sender: UIButton) {
+        billField.text = "";
+        tipLabel.text = String(format: "$%.2f", "")
+        totalLabel.text = String(format: "$%.2f", "")
+    }
+    
     @IBAction func calculateTip(_ sender: Any) {
         let tipPercentages = [0.1, 0.15, 0.18, 0.20]
         
@@ -94,7 +103,4 @@ class HomeViewController: UIViewController {
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
     }
-    
-    
 }
-

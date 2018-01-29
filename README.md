@@ -1,27 +1,26 @@
-# Pre-work - *Name of App Here*
+# Pre-work - *Tippy*
 
-**Name of your app** is a tip calculator application for iOS.
+**Tippy** is a tip calculator application for iOS.
 
 Submitted by: **Mavey Ma**
 
-Time spent: **X** hours spent in total
+Time spent: **9** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is complete:
 
-* [ ] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
+* [x] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
 
 The following **optional** features are implemented:
-* [ ] Settings page to change the default tip percentage.
+* [x] Settings page to change the default tip percentage.
 * [ ] UI animations
 * [ ] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
-
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] Clear button conveniently clears bill's text field and resets Tip and Total value to $0.00
 
 ## Video Walkthrough
 
@@ -34,6 +33,10 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+* Spent about 6 hours (not included in Time spent indicated above) learning Swift for the first time by taking handwritten notes while going through [_The Basics_ from Apple's official Swift documentation](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309)
+* Learned how PickerView worked -- getting the UI to remember the last selected item
+* Learned how to UserDefaults -- getting the tip to update dynamically on the homescreen after selecting PickerView value
+* Learned how to customized the UI -- getting the desired fonts and colors
 
 ## License
 

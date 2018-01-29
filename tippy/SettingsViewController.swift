@@ -14,7 +14,6 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     let defaults = UserDefaults.standard
     @IBOutlet weak var defaultTipPickerView: UIPickerView!
     var pickerData: [String] = [String]()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +35,11 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // Dispose of any resources that can be recreated.
     }
     
-    
     /**
      * Summary: Helper functions from PickerView tutorial
      * Source: https://codewithchris.com/uipickerview-example/
      * Author: Code snippet by Chris, Aug 26 '15
      */
-    
     // The number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -62,8 +59,6 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
-        print("Row: \(row)")
-        print("Component: \(component)")
         
         // Set a String value for some key.
         defaults.set(row, forKey: "myIndexOfDefaultTipArray")
@@ -71,19 +66,4 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // Force UserDefaults to save.
         defaults.synchronize()
     }
-    
-    
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
