@@ -41,7 +41,6 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.tintAdjustmentMode = .normal
         self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
         
-        print("view will appear")
         // This is a good place to retrieve the default tip percentage from UserDefaults
         // and use it to update the tip amount
         // Get an Integer value.
@@ -64,25 +63,17 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("view did appear")
         billField.becomeFirstResponder()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("view will disappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("view did disappear")
     }
 
-    @IBAction func onTap(_ sender: Any) {
-        //When user taps anywhere outside of the billField, hide keyboard
-        view.endEditing(true)
-    }
-    
     @IBAction func onTapClear(_ sender: UIButton) {
         billField.text = "";
         tipLabel.text = String(format: "$%.2f", "")
