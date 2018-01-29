@@ -4,7 +4,7 @@
 
 Submitted by: **Mavey Ma**
 
-Time spent: **9** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
@@ -28,9 +28,8 @@ Here's a walkthrough of implemented user stories:
 * [x] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
 * [x] Settings page to change the default tip percentage.
 * [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
-- [x] Clear button conveniently clears bill's text field and resets Tip and Total value to $0.00
+* [x] Clear button conveniently clears bill's text field and resets Tip and Total value to $0.00
 <img src='https://i.imgur.com/XyelQZl.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
@@ -40,6 +39,7 @@ Describe any challenges encountered while building the app.
 * Learned how PickerView worked -- getting the UI to remember the last selected item
 * Learned how to UserDefaults -- getting the tip to update dynamically on the homescreen after selecting PickerView value
 * Learned how to customized the UI -- getting the desired fonts and colors
+* Learned how to debug
 
 ## License
 
