@@ -4,7 +4,7 @@
 
 Submitted by: **Mavey Ma**
 
-Time spent: **10** hours spent in total
+Time spent: **11** hours spent in total
 
 ## User Stories
 
@@ -40,6 +40,7 @@ Describe any challenges encountered while building the app.
 * Learned how to UserDefaults -- getting the tip to update dynamically on the homescreen after selecting PickerView value
 * Learned how to customized the UI -- getting the desired fonts and colors
 * Learned how to debug
+* Learned some best practices in indentation, spaces, dead code, use of self, and useful commenting after reviewing [The Official raywenderlich.com Swift Style Guide](https://github.com/raywenderlich/swift-style-guide)
 
 ## License
 
