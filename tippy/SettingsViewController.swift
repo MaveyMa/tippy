@@ -60,7 +60,7 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     // This method is triggered whenever the user makes a change to the picker selection.
     // The parameter named row and component represents what was selected.
     
-    // Set a String value for some key.
+    // Set a Int value for some key.
     defaults.set(row, forKey: "myIndexOfDefaultTipArray")
     
     // Force UserDefaults to save.

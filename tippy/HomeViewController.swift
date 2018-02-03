@@ -41,20 +41,16 @@ class HomeViewController: UIViewController {
     navigationController?.navigationBar.tintAdjustmentMode = .normal
     navigationController?.navigationBar.tintAdjustmentMode = .automatic
     
-    // This is a good place to retrieve the default tip percentage from UserDefaults
-    // and use it to update the tip amount
-    // Get an Integer value.
+    // Grab the default tip value the user chose
     let intValue = defaults.integer(forKey: "myIndexOfDefaultTipArray")
     tipControl.selectedSegmentIndex = intValue
     let tipPercentages = [0.1, 0.15, 0.18, 0.20]
-    //Convert billField string into a number
-    //If what's on the left of ?? is equal to nil,
-    // return 0 as the default value
+    
+    // When user returns from Settings, tip and total should reflect the change immediately
     let bill = Double(billField.text!) ?? 0
     let tip = bill * tipPercentages[intValue]
     let total = bill + tip
     
-    //A special syntax \(variableName) that's like concatenation
     tipLabel.text = String(format: "$%.2f", tip)
     totalLabel.text = String(format: "$%.2f", total)
   }
@@ -82,13 +78,10 @@ class HomeViewController: UIViewController {
     let tipPercentages = [0.1, 0.15, 0.18, 0.20]
     
     //Convert billField string into a number
-    //If what's on the left of ?? is equal to nil,
-    // return 0 as the default value
     let bill = Double(billField.text!) ?? 0
     let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
     let total = bill + tip
     
-    //A special syntax \(variableName) that's like concatenation
     tipLabel.text = String(format: "$%.2f", tip)
     totalLabel.text = String(format: "$%.2f", total)
   }
