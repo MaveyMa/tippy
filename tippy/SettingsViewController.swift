@@ -20,8 +20,8 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     // Do any additional setup after loading the view.
     // Connect data:
-    self.defaultTipPickerView.delegate = self
-    self.defaultTipPickerView.dataSource = self
+    defaultTipPickerView.delegate = self
+    defaultTipPickerView.dataSource = self
     
     // Input data into the Array:
     pickerData = ["10%", "15%", "18%", "20%"]

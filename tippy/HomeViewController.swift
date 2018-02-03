@@ -38,8 +38,8 @@ class HomeViewController: UIViewController {
      * Author: Code snippet by matt, Dec 15 '17 at 20:47
      */
     super.viewWillAppear(animated)
-    self.navigationController?.navigationBar.tintAdjustmentMode = .normal
-    self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
+    navigationController?.navigationBar.tintAdjustmentMode = .normal
+    navigationController?.navigationBar.tintAdjustmentMode = .automatic
     
     // This is a good place to retrieve the default tip percentage from UserDefaults
     // and use it to update the tip amount
